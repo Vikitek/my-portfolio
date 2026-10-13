@@ -130,7 +130,7 @@ const Contact = () => {
 
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://github.com/Viktor10tek"
+                  href="https://github.com/Vikitek"
                   className="px-5 py-2.5 border border-border rounded-full text-sm font-medium text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition duration-300"
                 >
                   GitHub ↗

@@ -9,7 +9,7 @@ const projects = [
     description:
       "A responsive landing page built from a Figma design using HTML and CSS.",
     image: Nexcent,
-    github: "https://github.com/Viktor10tek/nexcent",
+    github: "https://github.com/Vikitek/nexcent",
     live: "https://nexcent-olive-kappa.vercel.app/",
     status: "Completed",
   },
@@ -18,7 +18,7 @@ const projects = [
     description:
       "A YouTube-inspired interface built as part of my frontend development practice.",
     image: Youtube,
-    github: "https://github.com/Viktor10tek/Youtube-Clone",
+    github: "https://github.com/Vikitek/Youtube-Clone",
     live: "https://youtube-clone-chi-pink-21.vercel.app/",
     status: "Completed",
   },
@@ -27,8 +27,8 @@ const projects = [
     description:
       "A responsive dark-themed landing page built from a Frontend Mentor design.",
     image: Fylo,
-    github: "https://github.com/Viktor10tek/Fylo-Dark",
-    live: "https://viktor10tek-fylo-dark.vercel.app/",
+    github: "https://github.com/Vikitek/Fylo-Dark",
+    live: "https://viktek-fylo-dark.vercel.app/",
     status: "Completed",
   },
   {
