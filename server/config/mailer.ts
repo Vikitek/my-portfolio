@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 interface ContactEmailData {
   name: string;
@@ -9,33 +9,19 @@ interface ContactEmailData {
 export const sendContactNotification = async (
   data: ContactEmailData,
 ): Promise<void> => {
-  // Read the environment variables when the function runs.
-  const emailUser = process.env.EMAIL_USER;
-  const emailPass = process.env.EMAIL_PASS;
+  const apiKey = process.env.RESEND_API_KEY;
   const notificationEmail = process.env.NOTIFICATION_EMAIL;
 
-console.log("Email configuration check:", {
-  EMAIL_USER: Boolean(emailUser),
-  EMAIL_PASS: Boolean(emailPass),
-  NOTIFICATION_EMAIL: Boolean(notificationEmail),
-});
-
-  if (!emailUser || !emailPass || !notificationEmail) {
+  if (!apiKey || !notificationEmail) {
     throw new Error(
-      "Missing EMAIL_USER, EMAIL_PASS, or NOTIFICATION_EMAIL in .env",
+      "Missing RESEND_API_KEY or NOTIFICATION_EMAIL in environment variables.",
     );
   }
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: emailUser,
-      pass: emailPass,
-    },
-  });
+  const resend = new Resend(apiKey);
 
-  await transporter.sendMail({
-    from: `"Portfolio Contact Form" <${emailUser}>`,
+  const { error } = await resend.emails.send({
+    from: "Portfolio Contact <onboarding@resend.dev>",
     to: notificationEmail,
     replyTo: data.email,
     subject: `New portfolio message from ${data.name}`,
@@ -49,4 +35,9 @@ console.log("Email configuration check:", {
       data.message,
     ].join("\n"),
   });
+
+  if (error) {
+    console.error("Resend email error:", error);
+    throw new Error(`Failed to send contact notification: ${error.message}`);
+  }
 };
