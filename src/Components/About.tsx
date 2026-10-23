@@ -1,129 +1,162 @@
+
 import { useState } from "react";
 
 const About = () => {
   const [showMore, setShowMore] = useState(false);
 
+  const highlights = [
+    {
+      icon: "⚙️",
+      title: "Backend Development",
+      text: "Building server-side logic and APIs that help applications work reliably.",
+    },
+    {
+      icon: "🗄️",
+      title: "Databases & APIs",
+      text: "Working with data, designing API endpoints, and connecting application features.",
+    },
+    {
+      icon: "💼",
+      title: "Business Perspective",
+      text: "Using my background in business administration to understand the problem behind the code.",
+    },
+    {
+      icon: "🌱",
+      title: "Continuous Learning",
+      text: "Strengthening my skills by building projects, solving problems, and learning new concepts.",
+    },
+  ];
+
   return (
-    <section id="about" className="px-6 py-24 md:px-12 lg:px-20 bg-[rgb(23,23,34)]">
-      <div className="max-w-7xl mx-auto">
-        {/* HEADER */}
+    <section
+      id="about"
+      className="scroll-mt-24 bg-white px-6 py-24 md:px-12 lg:px-20"
+    >
+      <div className="mx-auto max-w-7xl">
+        {/* SECTION HEADER */}
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
-            About Me
+            A Little About Me
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-            Building with purpose,
-            <span className="block text-primary">learning with passion.</span>
+          <h2 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-navy md:text-5xl lg:text-6xl">
+            I like understanding
+            <span className="block text-primary">
+              how things work.
+            </span>
           </h2>
+
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Especially when I can turn that understanding into something
+            useful.
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 mt-16">
-          {/* TEXT */}
+        {/* MAIN CONTENT */}
+        <div className="mt-14 grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+          {/* INTRODUCTION */}
           <div>
-            <p className="text-lg leading-8 text-muted">
-              I'm a Full-Stack Developer with a background in Business
-              Administration and management. My journey into technology came
-              from a genuine passion for creating, solving problems and
-              understanding how technology can transform ideas into real
-              solutions.
+            <p className="text-base leading-8 text-slate-600 md:text-lg">
+              I'm Victor Adama, a developer with a growing focus on backend
+              development and fullstack web applications. I enjoy learning
+              how the different parts of an application fit together; from
+              the interface people use to the APIs, databases, and server-side
+              logic working behind it.
             </p>
 
-            <p className="text-lg leading-8 text-muted mt-6">
-              My background in business and management has taught me the
-              importance of communication, organization, leadership and
-              understanding the needs behind a project.
+            <p className="mt-6 text-base leading-8 text-slate-600 md:text-lg">
+              Before moving into technology, I studied Business Administration
+              and developed an appreciation for organization, communication,
+              and understanding people's needs. That experience still shapes
+              how I approach software: I want to understand the problem before
+              deciding how to solve it.
             </p>
 
-            <button
-              onClick={() => setShowMore(!showMore)}
-              className="mt-8 inline-flex items-center mr-4 gap-3 px-6 py-3.5 bg-primary text-white rounded-full font-semibold hover:bg-primary-dark hover:-translate-y-1 transition duration-300"
-            >
-              {showMore ? "Show Less" : "Read My Journey"}
-              <span className="text-lg">{showMore ? "↑" : "→"}</span>
-            </button>
-
+            {/* EXPANDABLE STORY */}
             {showMore && (
-              <div className="mt-8 p-7 md:p-8 bg-[#0f0f17] rounded-3xl border border-border">
-                <p className="text-muted leading-8">
-                  Coming from a business administration and management
-                  background, technology initially felt like a completely
-                  different world. But the more I discovered what could be built
-                  with code, the more interested I became.
+              <div className="mt-6 space-y-5 rounded-2xl border border-violet-100 bg-violet-50/70 p-6 md:p-8">
+                <p className="leading-8 text-slate-600">
+                  My journey into development started with the fundamentals
+                  of web development. As I learned HTML, CSS, JavaScript,
+                  React, and TypeScript, I became increasingly interested in
+                  what happens behind the interface; how applications
+                  process requests, manage information, and communicate with
+                  databases.
                 </p>
 
-                <p className="text-muted leading-8 mt-5">
-                  I decided to make a career transition into technology and
-                  started learning web development from the fundamentals. From
-                  HTML and CSS to JavaScript, React, TypeScript and backend
-                  development, every new concept has been another step toward
-                  becoming the developer I want to be.
+                <p className="leading-8 text-slate-600">
+                  That curiosity has led me deeper into backend development,
+                  including building APIs, working with databases, and
+                  learning how authentication and server side logic fit into
+                  a complete application.
                 </p>
 
-                <p className="text-muted leading-8 mt-5">
-                  I'm not leaving my previous experience behind. I'm combining
-                  both worlds — business understanding and technical skills — to
-                  become a developer who can understand a problem from both the
-                  user's and the business's perspective.
+                <p className="leading-8 text-slate-600">
+                  I'm continuing to grow through hands on projects and
+                  practical problem-solving. My goal is to become a developer
+                  who can build reliable systems while keeping the people
+                  and real world needs behind those systems in mind.
                 </p>
               </div>
             )}
 
-            <a
-              href="#contact"
-              className="inline-flex items-center mt-8 font-semibold text-primary hover:text-primary-dark hover:underline"
-            >
-              Let's work together
-              <span className="ml-2">→</span>
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <button
+                type="button"
+                onClick={() => setShowMore((prev) => !prev)}
+                aria-expanded={showMore}
+                className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-semibold text-white shadow-sm shadow-indigo-200 transition duration-200 hover:-translate-y-0.5 hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              >
+                {showMore ? "Show Less" : "Read My Journey"}
+                <span aria-hidden="true">
+                  {showMore ? "↑" : ""}
+                </span>
+              </button>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-full px-3 py-3 font-semibold text-navy transition hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              >
+                Let's Connect <span aria-hidden="true"></span>
+              </a>
+            </div>
           </div>
 
-          {/* CARDS */}
-          <div className="grid sm:grid-cols-2 gap-5">
-            {[
-              {
-                icon: "💼",
-                title: "Business Mindset",
-                text: "My background in management helps me understand the bigger picture behind a project.",
-              },
-              {
-                icon: "💻",
-                title: "Tech Passion",
-                text: "I'm passionate about building modern and useful digital experiences.",
-              },
-              {
-                icon: "🧩",
-                title: "Problem Solver",
-                text: "I enjoy breaking complex problems into practical solutions.",
-              },
-              {
-                icon: "🚀",
-                title: "Always Learning",
-                text: "I'm continuously learning and improving my technical skills.",
-              },
-            ].map((item) => (
-              <div
+          {/* HIGHLIGHT CARDS */}
+          <div className="grid gap-5 sm:grid-cols-2">
+            {highlights.map((item) => (
+              <article
                 key={item.title}
-                className="group p-7 bg-[#0f0f17] rounded-3xl border border-border hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition duration-300"
+                className="group rounded-3xl border border-slate-200 bg-gray-100 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl hover:shadow-violet-100/60 md:p-7"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-accent text-2xl group-hover:scale-110 transition duration-300">
-                  {item.icon}
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-50 text-2xl transition duration-300 group-hover:bg-violet-100">
+                  <span aria-hidden="true">{item.icon}</span>
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold">{item.title}</h3>
+                <h3 className="mt-5 text-lg font-bold text-navy">
+                  {item.title}
+                </h3>
 
-                <p className="mt-3 text-muted leading-7">{item.text}</p>
-              </div>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  {item.text}
+                </p>
+              </article>
             ))}
           </div>
         </div>
 
-        {/* QUOTE */}
-        <div className="mt-20 pt-10 border-t border-border">
-          <p className="max-w-4xl text-2xl md:text-3xl font-semibold leading-relaxed">
-            "I believe great technology starts with understanding the problem
-            before writing the solution."
-          </p>
+        {/* CLOSING STATEMENT */}
+        <div className="mt-20 border-t border-slate-200 pt-10">
+          <div className="rounded-3xl bg-violet-50/70 px-6 py-8 md:px-10 md:py-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              How I approach development
+            </p>
+
+            <blockquote className="mt-4 max-w-4xl text-2xl font-semibold leading-relaxed text-navy md:text-3xl">
+              "Understand the problem, build a thoughtful solution, and keep
+              improving it."
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>

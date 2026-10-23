@@ -1,107 +1,124 @@
 import victorImage from "../assets/victor.png";
 
 const Hero = () => {
-  return (
-    <section
-      id="home"
-      className="relative min-h-[calc(100vh-80px)] flex items-center px-6 py-16 md:px-12 lg:px-20 bg-[#0f0f17] overflow-hidden"
-    >
-      {/* BACKGROUND GLOW */}
-      <div className="absolute top-10 -left-37.5 w-87.5 h-87.5 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+return ( <section
+   id="home"
+   className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-white px-6 py-16 md:px-12 lg:px-20"
+ >
+{/* Subtle background accents */} <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-[#a78bfa]/15 blur-[120px]" />
 
-      <div className="absolute -bottom-37.5 -right-25 w-100 h-100 bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+  <div className="pointer-events-none absolute -bottom-40 right-0 h-96 w-96 rounded-full bg-[#4f46e5]/10 blur-[140px]" />
 
-      <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* LEFT */}
-          <div>
-            <p className="text-sm md:text-base font-semibold uppercase tracking-[0.25em] text-primary">
-              Hello, I'm
-            </p>
+  <div className="relative z-10 mx-auto w-full max-w-7xl">
+    <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      {/* Introduction */}
+      <div>
+        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-[#4f46e5] md:text-base">
+          Hello, I'm
+        </p>
 
-            <h1 className="mt-4 text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight">
-              Victor
-              <span className="block">
-                Adama<span className="text-primary">.</span>
-              </span>
-            </h1>
+        <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight text-[#172554] md:text-6xl lg:text-7xl">
+          Victor
+          <span className="mt-1 block">
+            Adama
+          </span>
+        </h1>
 
-            <div className="mt-6 flex items-center gap-3">
-              <span className="w-10 h-0.75 bg-primary rounded-full" />
+        <div className="mt-7 flex items-center gap-3">
+          <h2 className="text-xl font-semibold text-[#172554] md:text-2xl">
+            Backend Focused Developer
+          </h2>
+        </div>
 
-              <h2 className="text-xl md:text-2xl font-semibold">
-                Full-Stack Developer
-              </h2>
-            </div>
+        <p className="mt-6 max-w-xl text-base leading-8 text-[#64748b] md:text-lg">
+          I enjoy building the systems that make web applications work.
+          From designing APIs and working with databases to implementing
+          authentication and server side logic, I focus on creating reliable
+          backend solutions that solve real problems. I also build
+          responsive frontends to bring those systems together into
+          complete web applications.
+        </p>
 
-            <p className="mt-7 max-w-xl text-base md:text-lg leading-8 text-muted">
-              I build modern, responsive and user-focused web applications that
-              turn ideas into functional digital experiences.
-            </p>
+        {/* Core interests */}
+        <div className="mt-6 flex flex-wrap gap-2">
+          {["Node.js", "Express", "MongoDB", "REST APIs"].map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-[#e2e8f0] bg-white px-3 py-1.5 text-sm font-medium text-[#334155]"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
 
-            {/* BUTTONS */}
-            <div className="flex flex-wrap gap-4 mt-9">
-              <a
-                href="#projects"
-                className="px-7 py-3.5 bg-primary text-white rounded-full font-semibold hover:bg-primary-dark hover:-translate-y-1 transition duration-300 shadow-lg shadow-primary/20"
-              >
-                View My Work
-              </a>
+        {/* Action buttons */}
+        <div className="mt-9 flex flex-wrap gap-4">
+          <a
+            href="#projects"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#4f46e5] px-7 py-3.5 font-semibold text-white shadow-lg shadow-indigo-500/20 transition duration-300 hover:-translate-y-1 hover:bg-[#4338ca]"
+          >
+            View My Work
+            <span aria-hidden="true">↗</span>
+          </a>
 
-              <a
-                href="#contact"
-                className="px-7 py-3.5 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white hover:-translate-y-1 transition duration-300"
-              >
-                Contact Me
-              </a>
-            </div>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center rounded-full border border-[#c7d2fe] bg-white px-7 py-3.5 font-semibold text-[#4338ca] transition duration-300 hover:-translate-y-1 hover:bg-[#f5f3ff]"
+          >
+            Get In Touch
+          </a>
+        </div>
 
-            {/* SOCIALS */}
-            <div className="flex items-center gap-5 mt-10">
-              <a
-                href="https://github.com/Viktor10tek"
-                className="text-sm font-medium text-muted hover:text-primary hover:underline transition"
-              >
-                GitHub ↗
-              </a>
+        {/* Social links */}
+        <div className="mt-10 flex items-center gap-5">
+          <a
+            href="https://github.com/Viktor10tek"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-[#64748b] transition hover:text-[#4f46e5]"
+          >
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
 
-              <span className="text-border">/</span>
+          <span className="text-[#cbd5e1]">/</span>
 
-              <a
-                href="https://www.linkedin.com/in/victor-adams-0a3b4c/"
-                className="text-sm font-medium text-muted hover:text-primary transition"
-              >
-                LinkedIn ↗
-              </a>
-            </div>
-          </div>
-
-          {/* PHOTO */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* OUTER GLOW */}
-              <div className="absolute inset-0 rounded-4xl bg-primary/20 blur-[50px] scale-90" />
-
-              {/* DECORATIVE FRAME */}
-              <div className="absolute -top-5 -right-5 w-full h-full rounded-4xl border-2 border-primary/30" />
-
-              {/* IMAGE */}
-              <div className="relative w-80 h-96 md:w-95 md:h-115 lg:w-110 lg:h-135 rounded-4xl overflow-hidden bg-accent shadow-2xl glow">
-                <img
-                  src={victorImage}
-                  alt="Victor"
-                  className="w-full h-full object-cover scale-105 hover:scale-110 transition duration-700"
-                />
-              </div>
-
-              {/* DECORATIVE CIRCLE */}
-              <div className="absolute -bottom-5 -left-5 w-16 h-16 rounded-full border-2 border-primary/30 bg-[#0f0f17]" />
-            </div>
-          </div>
+          <a
+            href="https://www.linkedin.com/in/victor-adams-0a3b4c/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-[#64748b] transition hover:text-[#4f46e5]"
+          >
+            LinkedIn <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
-    </section>
-  );
+
+      {/* Profile image */}
+      <div className="flex justify-center lg:justify-end">
+        <div className="relative">
+          {/* Soft lavender glow */}
+          <div className="absolute inset-0 scale-90 bg-[#a78bfa]/20 blur-[50px]" />
+
+          {/* Decorative frame */}
+          <div className="absolute -right-4 -top-4 h-full w-full border-2 border-[#a78bfa]/50 md:-right-5 md:-top-5" />
+
+          {/* Image container */}
+          <div className="glow relative h-80 w-72 overflow-hidden rounded-[1rem] bg-[#f5f3ff] shadow-1xl md:h-[28rem] md:w-[23rem] lg:h-[34rem] lg:w-[27rem]">
+            <img
+              src={victorImage}
+              alt="Victor Adama, backend-focused developer"
+              className="h-full w-full object-cover transition duration-700 hover:scale-105"
+            />
+          </div>
+
+         
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+);
 };
 
 export default Hero;

@@ -1,3 +1,4 @@
+
 const Skills = () => {
   const frontendSkills = [
     "HTML",
@@ -12,128 +13,150 @@ const Skills = () => {
     "Node.js",
     "Express.js",
     "REST APIs",
-    "Routes",
-    "Controllers",
+    "Routes & Controllers",
     "Middleware",
-    "TypeScript Types",
     "MongoDB",
+    "Mongoose",
+    "Authentication",
   ];
 
-  const tools = ["Git", "GitHub", "VS Code", "Vercel", "Postman", "Figma"];
+  const tools = [
+    "Git",
+    "GitHub",
+    "VS Code",
+    "Postman",
+    "Vercel",
+    "googleAuth",
+    "Brevo",
+    "Claudinary",
+    "Figma",
+  ];
+
+  const skillGroups = [
+    {
+      title: "Backend Development",
+      description:
+        "Building the server-side logic that allows applications to process requests, manage data, and deliver reliable functionality.",
+      icon: "{ }",
+      skills: backendSkills,
+      featured: true,
+    },
+    {
+      title: "Frontend Development",
+      description:
+        "Creating responsive interfaces that make applications accessible, intuitive, and pleasant to use.",
+      icon: "</>",
+      skills: frontendSkills,
+      featured: false,
+    },
+    {
+      title: "Tools & Workflow",
+      description:
+        "Using development and collaboration tools to write, test, manage, and deploy projects.",
+      icon: "⚙",
+      skills: tools,
+      featured: false,
+    },
+  ];
 
   return (
-    <section id="skills" className="bg-[#0f0f17] px-6 py-24 md:px-12 lg:px-20">
+    <section
+      id="skills"
+      className="scroll-mt-24 bg-violet-50/50 px-6 py-24 md:px-12 lg:px-20"
+    >
       <div className="mx-auto max-w-7xl">
         {/* HEADER */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
-            My Skills
+            Technical Skills
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-            Tools I use to
-            <span className="block text-primary">
-              build digital experiences.
-            </span>
+          <h2 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-navy md:text-5xl lg:text-6xl">
+            What I use to build
+              useful applications.
+            
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
-            I'm developing skills across the full development stack, from
-            building responsive interfaces to creating backend applications and
-            working with modern development tools.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            I'm building my skills across the development stack, with a
+            particular interest in backend systems, APIs, and databases.
+            Here's a look at the technologies and tools I work with in my
+            projects.
           </p>
         </div>
 
-        {/* SKILL CARDS */}
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {/* FRONTEND */}
-          <div className="group rounded-3xl border border-border bg-[rgb(23,23,34)] p-8 transition duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-xl font-bold text-primary transition duration-300 group-hover:scale-110">
-              &lt;/&gt;
-            </div>
+        {/* SKILL GROUPS */}
+        <div className="mt-14 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {skillGroups.map((group) => (
+            <article
+              key={group.title}
+              className={`group relative flex flex-col overflow-hidden rounded-3xl border p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl md:p-8 ${
+                group.featured
+                  ? "border-violet-200 bg-white shadow-lg shadow-violet-100/70 ring-1 ring-violet-100"
+                  : "border-slate-200 bg-white shadow-sm hover:border-violet-200 hover:shadow-violet-100/60"
+              }`}
+            >
+              {/* BACKEND ACCENT */}
+              {group.featured && (
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-violet-300" />
+              )}
 
-            <h3 className="mt-7 text-2xl font-bold text-white">Frontend</h3>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-50 text-xl font-bold text-primary transition duration-300 group-hover:bg-violet-100">
+                  <span aria-hidden="true">{group.icon}</span>
+                </div>
 
-            <p className="mt-3 leading-7 text-muted">
-              Building responsive and interactive user interfaces with modern
-              frontend technologies.
+                {group.featured && (
+                  <span className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1.5 text-xs font-semibold text-primary">
+                    Current Focus
+                  </span>
+                )}
+              </div>
+
+              <h3 className="mt-7 text-2xl font-bold text-navy">
+                {group.title}
+              </h3>
+
+              <p className="mt-3 leading-7 text-slate-600">
+                {group.description}
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-2.5">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-medium text-slate-700 transition duration-200 hover:border-violet-300 hover:bg-violet-50 hover:text-primary"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* CLOSING STATEMENT */}
+        <div className="relative mt-16 overflow-hidden rounded-3xl bg-navy px-7 py-10 text-white md:px-12 md:py-12">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-12 -top-20 h-64 w-64 rounded-full bg-violet-400/20 blur-3xl"
+          />
+
+          <div className="relative max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-violet-300">
+              My approach
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {frontendSkills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-border bg-[#0f0f17] px-3.5 py-2 text-sm font-medium text-gray-300 transition duration-300 hover:border-primary hover:bg-primary hover:text-white"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* BACKEND */}
-          <div className="group rounded-3xl border border-border bg-[rgb(23,23,34)] p-8 transition duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-xl font-bold text-primary transition duration-300 group-hover:scale-110">
-              {"{ }"}
-            </div>
-
-            <h3 className="mt-7 text-2xl font-bold text-white">Backend</h3>
-
-            <p className="mt-3 leading-7 text-muted">
-              Developing server-side applications, APIs, and the logic that
-              powers web applications.
-            </p>
-
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {backendSkills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-border bg-[#0f0f17] px-3.5 py-2 text-sm font-medium text-gray-300 transition duration-300 hover:border-primary hover:bg-primary hover:text-white"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* TOOLS */}
-          <div className="group rounded-3xl border border-border bg-[rgb(23,23,34)] p-8 transition duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 md:col-span-2 lg:col-span-1">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-xl text-primary transition duration-300 group-hover:scale-110">
-              ⚙
-            </div>
-
-            <h3 className="mt-7 text-2xl font-bold text-white">
-              Tools & Workflow
+            <h3 className="mt-4 text-2xl font-semibold leading-relaxed md:text-3xl">
+              I learn best by building, testing ideas, and working through
+              real problems — one project at a time.
             </h3>
 
-            <p className="mt-3 leading-7 text-muted">
-              Tools I use to write code, manage projects, collaborate, and
-              deploy applications.
+            <p className="mt-5 text-base leading-7 text-slate-300">
+              The goal isn't just to know the tools. It's to understand when
+              and how to use them to build something that works.
             </p>
-
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="rounded-full border border-border bg-[rgb(15,15,23)] px-3.5 py-2 text-sm font-medium text-gray-300 transition duration-300 hover:border-primary hover:bg-primary hover:text-white"
-                >
-                  {tool}
-                </span>
-              ))}
-            </div>
           </div>
-        </div>
-
-        {/* STATEMENT */}
-        <div className="mt-16 rounded-3xl bg-primary p-8 text-white md:p-10">
-          <p className="max-w-4xl text-xl font-medium leading-relaxed md:text-2xl lg:text-3xl">
-            "I'm not just learning technologies — I'm learning how to use
-            technology to solve problems and turn ideas into working products."
-          </p>
-
-          <p className="mt-6 text-white/70">
-            Always learning. Always building.
-          </p>
         </div>
       </div>
     </section>

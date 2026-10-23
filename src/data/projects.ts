@@ -26,37 +26,36 @@ export const projects: Project[] = [
     status: "Completed",
 
     description:
-      "A responsive landing page built with a focus on clean layouts, reusable components and responsive design across different screen sizes.",
+      "A responsive landing page recreated from a Figma design, with a focus on clean layouts and adapting the interface to different screen sizes.",
 
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    technologies: ["HTML", "CSS", "Responsive Design"],
 
     image: nexcentImage,
 
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://nexcent-olive-kappa.vercel.app/",
 
     contribution: [
-      "Converted the design into a responsive web interface.",
-      "Built reusable React components.",
-      "Implemented responsive layouts with Tailwind CSS.",
-      "Practiced modern frontend development techniques.",
+      "Translated the design into a responsive web interface.",
+      "Built structured page sections and layouts.",
+      "Applied responsive styling for different screen sizes.",
+      "Practiced translating a visual design into a working website.",
     ],
 
     challenges:
-      "One of the main challenges was making the layout work properly across different screen sizes while keeping the design consistent.",
+      "Maintaining consistent spacing and alignment across different screen sizes while staying close to the original design.",
 
     learning:
-      "This project helped me improve my understanding of React components, TypeScript and responsive design with Tailwind CSS.",
+      "This project strengthened my understanding of HTML, CSS and responsive web design.",
   },
 
   {
-    title: "Worknest",
+    title: "WorkNest",
     slug: "worknest",
     type: "Full-Stack Group Project",
-    status: "In Progress",
+    status: "Completed",
 
     description:
-      "A job platform currently being developed as a collaborative full-stack project. The platform is designed to provide a clean and user-friendly experience for users interacting with job opportunities.",
+      "A collaborative job platform built to provide users with a structured, user-friendly experience when interacting with job opportunities. The project brought together frontend interfaces and backend functionality.",
 
     technologies: [
       "React",
@@ -69,79 +68,76 @@ export const projects: Project[] = [
 
     image: worknestImage,
 
+    liveUrl: "https://work-nest-front.vercel.app/",
+
     contribution: [
-      "Contributing to the React and TypeScript frontend.",
-      "Implementing interfaces based on the team's Figma design.",
-      "Working on the Review & Submit section.",
-      "Building input and form-related interactions.",
-      "Implementing progress-step functionality.",
-      "Collaborating with other team members during development.",
+      "Contributed extensively to the frontend and backend development.",
+      "Worked with the team to bring the application's features and workflows together.",
+      "Helped implement application interfaces and functionality.",
+      "Collaborated with team members throughout development.",
     ],
 
     challenges:
-      "Working on a group project requires coordinating different parts of the application and making sure individual components fit properly into the overall design and functionality.",
+      "Coordinating frontend and backend functionality while collaborating with other developers and ensuring different parts of the application worked together.",
 
     learning:
-      "This project is helping me understand how a real-world application is developed collaboratively, while improving my React, TypeScript, Tailwind CSS and full-stack development skills.",
+      "This project strengthened my understanding of full-stack development, API integration, database-backed applications and collaborative software development.",
   },
 
   {
-    title: "Youtube Clone",
+    title: "YouTube Clone",
     slug: "youtube-clone",
     type: "Frontend Project",
     status: "Completed",
 
     description:
-      "A responsive recreation of the YouTube interface, focusing on layout, navigation, video cards and responsive design.",
+      "A YouTube-inspired interface built to practise page layouts, navigation, video cards and responsive frontend design.",
 
     technologies: ["HTML", "CSS", "JavaScript"],
 
     image: youtubeImage,
 
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://youtube-clone-chi-pink-21.vercel.app/",
 
     contribution: [
-      "Recreated the YouTube-style interface.",
-      "Built responsive video-card layouts.",
-      "Implemented navigation and sidebar sections.",
-      "Practiced CSS Grid and Flexbox.",
-      "Added hover effects and responsive behavior.",
+      "Recreated a YouTube-inspired interface.",
+      "Built video-card layouts and page sections.",
+      "Implemented navigation and sidebar elements.",
+      "Practised CSS Grid, Flexbox and responsive styling.",
     ],
 
     challenges:
-      "Recreating a complex interface while maintaining proper spacing, alignment and responsive behavior was one of the main challenges.",
+      "Recreating a familiar interface while maintaining consistent spacing, alignment and responsive behavior.",
 
     learning:
-      "The project strengthened my HTML, CSS and JavaScript fundamentals and improved my understanding of responsive layouts.",
+      "This project strengthened my HTML, CSS and JavaScript fundamentals and improved my understanding of responsive layouts.",
   },
 
   {
-    title: "Fylo Landing Page",
-    slug: "Fylo",
+    title: "Fylo Dark",
+    slug: "fylo-dark",
     type: "Frontend Project",
     status: "Completed",
 
     description:
-      "A responsive landing page built to practice modern layouts, typography, spacing, hover effects and responsive design.",
+      "A responsive landing page built to practise modern layouts, typography, spacing, visual hierarchy and responsive design.",
 
-    technologies: ["HTML", "CSS"],
+    technologies: ["HTML", "CSS", "Responsive Design"],
 
     image: fyloImage,
 
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://fylo-dark-vik.vercel.app/",
 
     contribution: [
       "Built the page structure using HTML.",
       "Styled the interface using CSS.",
       "Implemented responsive layouts.",
-      "Practiced typography and spacing.",
+      "Practised typography, spacing and visual hierarchy.",
       "Added interactive hover effects.",
     ],
 
     challenges:
-      "Matching the original design while maintaining a responsive layout required careful attention to spacing, sizing and positioning.",
+      "Matching the intended design while maintaining a responsive layout required careful attention to spacing, sizing and positioning.",
 
     learning:
       "This project improved my CSS layout skills and helped me become more comfortable translating designs into working web pages.",
