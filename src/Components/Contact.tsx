@@ -80,12 +80,12 @@ const Contact = () => {
   };
 
   const inputClass =
-    "w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-navy placeholder:text-slate-400 outline-none transition focus:border-primary focus:ring-4 focus:ring-violet-100";
+    "theme-border theme-text w-full rounded-xl border bg-white px-4 py-3.5 placeholder:text-slate-400 outline-none transition-colors duration-300 focus:border-primary focus:ring-4 focus:ring-violet-100 dark:bg-[#151522] dark:placeholder:text-[#77778f] dark:focus:ring-[#29243f]";
 
   return (
     <section
       id="contact"
-      className="scroll-mt-24 bg-violet-50/50 px-6 py-24 md:px-12 lg:px-20"
+      className="theme-bg-secondary scroll-mt-24 px-6 py-24 transition-colors duration-300 md:px-12 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
         {/* HEADER */}
@@ -94,12 +94,12 @@ const Contact = () => {
             Get in Touch
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-navy md:text-5xl lg:text-6xl">
+          <h2 className="theme-text mt-4 text-4xl font-bold leading-tight tracking-tight transition-colors duration-300 md:text-5xl lg:text-6xl">
             Have something
-            <span className="block text-primary">in mind?</span>
+            <span className="text-primary block">in mind?</span>
           </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="theme-muted mt-6 max-w-2xl text-lg leading-8 transition-colors duration-300">
             Whether it's a development opportunity, a project, or a conversation
             about technology, feel free to reach out. I'd be happy to hear from
             you.
@@ -109,11 +109,11 @@ const Contact = () => {
         <div className="mt-14 grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
           {/* CONTACT INFORMATION */}
           <div className="pt-2">
-            <h3 className="text-2xl font-bold text-navy md:text-3xl">
+            <h3 className="theme-text text-2xl font-bold transition-colors duration-300 md:text-3xl">
               Let's start a conversation.
             </h3>
 
-            <p className="mt-4 max-w-md leading-8 text-slate-600">
+            <p className="theme-muted mt-4 max-w-md leading-8 transition-colors duration-300">
               I'm interested in meaningful projects, collaboration, and
               opportunities to keep growing as a developer, particularly in
               backend and full-stack development.
@@ -121,15 +121,15 @@ const Contact = () => {
 
             {/* EMAIL */}
             <div className="mt-9 flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-xl shadow-sm ring-1 ring-slate-200">
+              <div className="theme-card theme-border flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border text-xl shadow-sm">
                 <span aria-hidden="true">✉</span>
               </div>
 
               <div>
-                <p className="text-sm font-medium text-slate-500">Email</p>
+                <p className="theme-muted text-sm font-medium">Email</p>
                 <a
                   href="mailto:vicadams4real@gmail.com"
-                  className="mt-1 inline-block break-all font-semibold text-navy transition hover:text-primary"
+                  className="theme-text mt-1 inline-block break-all font-semibold transition-colors hover:text-primary"
                 >
                   vicadams4real@gmail.com
                 </a>
@@ -138,15 +138,15 @@ const Contact = () => {
 
             {/* PHONE */}
             <div className="mt-6 flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-xl shadow-sm ring-1 ring-slate-200">
+              <div className="theme-card theme-border flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border text-xl shadow-sm">
                 <span aria-hidden="true">☎</span>
               </div>
 
               <div>
-                <p className="text-sm font-medium text-slate-500">Phone</p>
+                <p className="theme-muted text-sm font-medium">Phone</p>
                 <a
                   href="tel:+2348032787704"
-                  className="mt-1 inline-block font-semibold text-navy transition hover:text-primary"
+                  className="theme-text mt-1 inline-block font-semibold transition-colors hover:text-primary"
                 >
                   +234 803 278 7704
                 </a>
@@ -155,19 +155,19 @@ const Contact = () => {
 
             {/* LOCATION */}
             <div className="mt-6 flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-xl shadow-sm ring-1 ring-slate-200">
+              <div className="theme-card theme-border flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border text-xl shadow-sm">
                 <span aria-hidden="true">⌖</span>
               </div>
 
               <div>
-                <p className="text-sm font-medium text-slate-500">Location</p>
-                <p className="mt-1 font-semibold text-navy">Lagos, Nigeria</p>
+                <p className="theme-muted text-sm font-medium">Location</p>
+                <p className="theme-text mt-1 font-semibold">Lagos, Nigeria</p>
               </div>
             </div>
 
             {/* SOCIAL LINKS */}
-            <div className="mt-10 border-t border-slate-200 pt-7">
-              <p className="text-sm font-semibold text-navy">
+            <div className="theme-border mt-10 border-t pt-7">
+              <p className="theme-text text-sm font-semibold">
                 Find me online
               </p>
 
@@ -176,7 +176,7 @@ const Contact = () => {
                   href="https://github.com/Vikitek"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-violet-300 hover:bg-violet-50 hover:text-primary"
+                  className="theme-card theme-border theme-text rounded-full border px-5 py-2.5 text-sm font-semibold transition hover:border-violet-300 hover:bg-violet-50 hover:text-primary dark:hover:border-[#6558e8] dark:hover:bg-[#29243f] dark:hover:text-[#a78bfa]"
                 >
                   GitHub ↗
                 </a>
@@ -185,7 +185,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/victor-adams-0a3b4c/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-violet-300 hover:bg-violet-50 hover:text-primary"
+                  className="theme-card theme-border theme-text rounded-full border px-5 py-2.5 text-sm font-semibold transition hover:border-violet-300 hover:bg-violet-50 hover:text-primary dark:hover:border-[#6558e8] dark:hover:bg-[#29243f] dark:hover:text-[#a78bfa]"
                 >
                   LinkedIn ↗
                 </a>
@@ -194,12 +194,13 @@ const Contact = () => {
           </div>
 
           {/* CONTACT FORM */}
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-violet-100/50 md:p-8 lg:p-10">
+          <div className="theme-card theme-border rounded-3xl border p-6 shadow-xl shadow-violet-100/50 transition-colors duration-300 dark:shadow-violet-950/20 md:p-8 lg:p-10">
             <div className="mb-7">
-              <h3 className="text-xl font-bold text-navy md:text-2xl">
+              <h3 className="theme-text text-xl font-bold transition-colors duration-300 md:text-2xl">
                 Send me a message
               </h3>
-              <p className="mt-2 text-sm leading-6 text-slate-500">
+
+              <p className="theme-muted mt-2 text-sm leading-6">
                 Fill in the form below and I'll get back to you.
               </p>
             </div>
@@ -209,12 +210,13 @@ const Contact = () => {
               <div
                 role="status"
                 aria-live="polite"
-                className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4"
+                className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 dark:border-emerald-900 dark:bg-emerald-950/40"
               >
-                <p className="font-semibold text-emerald-800">
+                <p className="font-semibold text-emerald-800 dark:text-emerald-300">
                   Message sent successfully!
                 </p>
-                <p className="mt-1 text-sm leading-6 text-emerald-700">
+
+                <p className="mt-1 text-sm leading-6 text-emerald-700 dark:text-emerald-400">
                   Thanks for reaching out. Your message has been submitted.
                 </p>
               </div>
@@ -224,21 +226,25 @@ const Contact = () => {
             {error && (
               <div
                 role="alert"
-                className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-4"
+                className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-4 dark:border-red-900 dark:bg-red-950/40"
               >
-                <p className="font-semibold text-red-800">
+                <p className="font-semibold text-red-800 dark:text-red-300">
                   We couldn't send your message.
                 </p>
-                <p className="mt-1 text-sm leading-6 text-red-700">{error}</p>
+
+                <p className="mt-1 text-sm leading-6 text-red-700 dark:text-red-400">
+                  {error}
+                </p>
               </div>
             )}
 
+            {/* FORM */}
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* NAME */}
               <div>
                 <label
                   htmlFor="contact-name"
-                  className="mb-2 block text-sm font-semibold text-navy"
+                  className="theme-text mb-2 block text-sm font-semibold"
                 >
                   Your name
                 </label>
@@ -262,7 +268,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="contact-email"
-                  className="mb-2 block text-sm font-semibold text-navy"
+                  className="theme-text mb-2 block text-sm font-semibold"
                 >
                   Email address
                 </label>
@@ -285,7 +291,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="contact-message"
-                  className="mb-2 block text-sm font-semibold text-navy"
+                  className="theme-text mb-2 block text-sm font-semibold"
                 >
                   Your message
                 </label>
@@ -303,7 +309,7 @@ const Contact = () => {
                   className={`${inputClass} resize-y`}
                 />
 
-                <p className="mt-2 text-right text-xs text-slate-400">
+                <p className="theme-muted mt-2 text-right text-xs">
                   {formData.message.length}/5000 characters
                 </p>
               </div>
@@ -312,13 +318,13 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSending}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-semibold text-white shadow-md shadow-indigo-200 transition duration-200 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-semibold text-white shadow-md shadow-indigo-200 transition duration-200 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 dark:shadow-indigo-950/40"
               >
                 {isSending ? "Sending message..." : "Send Message"}
                 {!isSending && <span aria-hidden="true">→</span>}
               </button>
 
-              <p className="text-center text-xs leading-5 text-slate-500">
+              <p className="theme-muted text-center text-xs leading-5">
                 Your message will be sent securely to the contact service
                 configured for this portfolio.
               </p>

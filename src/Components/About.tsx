@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 const About = () => {
@@ -30,7 +29,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="scroll-mt-24 bg-white px-6 py-24 md:px-12 lg:px-20"
+      className="theme-bg scroll-mt-24 px-6 py-24 transition-colors duration-300 md:px-12 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
         {/* SECTION HEADER */}
@@ -39,14 +38,12 @@ const About = () => {
             A Little About Me
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-navy md:text-5xl lg:text-6xl">
-            I like understanding
-            <span className="block text-primary">
+          <h2 className="theme-text mt-4 text-4xl font-bold leading-tight tracking-tight transition-colors duration-300 md:text-5xl lg:text-6xl">
+            I like understanding <br />
               how things work.
-            </span>
           </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="theme-muted mt-6 max-w-2xl text-lg leading-8 transition-colors duration-300">
             Especially when I can turn that understanding into something
             useful.
           </p>
@@ -56,7 +53,7 @@ const About = () => {
         <div className="mt-14 grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
           {/* INTRODUCTION */}
           <div>
-            <p className="text-base leading-8 text-slate-600 md:text-lg">
+            <p className="theme-muted text-base leading-8 transition-colors duration-300 md:text-lg">
               I'm Victor Adama, a developer with a growing focus on backend
               development and fullstack web applications. I enjoy learning
               how the different parts of an application fit together; from
@@ -64,7 +61,7 @@ const About = () => {
               logic working behind it.
             </p>
 
-            <p className="mt-6 text-base leading-8 text-slate-600 md:text-lg">
+            <p className="theme-muted mt-6 text-base leading-8 transition-colors duration-300 md:text-lg">
               Before moving into technology, I studied Business Administration
               and developed an appreciation for organization, communication,
               and understanding people's needs. That experience still shapes
@@ -74,8 +71,8 @@ const About = () => {
 
             {/* EXPANDABLE STORY */}
             {showMore && (
-              <div className="mt-6 space-y-5 rounded-2xl border border-violet-100 bg-violet-50/70 p-6 md:p-8">
-                <p className="leading-8 text-slate-600">
+              <div className="mt-6 space-y-5 rounded-2xl border border-violet-100 bg-violet-50/70 p-6 transition-colors duration-300 dark:border-[#38334f] dark:bg-[#1b1b2a] md:p-8">
+                <p className="theme-muted leading-8">
                   My journey into development started with the fundamentals
                   of web development. As I learned HTML, CSS, JavaScript,
                   React, and TypeScript, I became increasingly interested in
@@ -84,40 +81,41 @@ const About = () => {
                   databases.
                 </p>
 
-                <p className="leading-8 text-slate-600">
+                <p className="theme-muted leading-8">
                   That curiosity has led me deeper into backend development,
                   including building APIs, working with databases, and
-                  learning how authentication and server side logic fit into
+                  learning how authentication and server-side logic fit into
                   a complete application.
                 </p>
 
-                <p className="leading-8 text-slate-600">
-                  I'm continuing to grow through hands on projects and
+                <p className="theme-muted leading-8">
+                  I'm continuing to grow through hands-on projects and
                   practical problem-solving. My goal is to become a developer
                   who can build reliable systems while keeping the people
-                  and real world needs behind those systems in mind.
+                  and real-world needs behind those systems in mind.
                 </p>
               </div>
             )}
 
+            {/* ACTION BUTTONS */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button
                 type="button"
                 onClick={() => setShowMore((prev) => !prev)}
                 aria-expanded={showMore}
-                className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-semibold text-white shadow-sm shadow-indigo-200 transition duration-200 hover:-translate-y-0.5 hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-semibold text-white shadow-sm shadow-indigo-200 transition duration-200 hover:-translate-y-0.5 hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary dark:shadow-indigo-950/40"
               >
                 {showMore ? "Show Less" : "Read My Journey"}
                 <span aria-hidden="true">
-                  {showMore ? "↑" : ""}
+                  {showMore ? "↑" : "↓"}
                 </span>
               </button>
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full px-3 py-3 font-semibold text-navy transition hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                className="theme-text inline-flex items-center gap-2 rounded-full px-3 py-3 font-semibold transition hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
               >
-                Let's Connect <span aria-hidden="true"></span>
+                Let's Connect <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
@@ -127,35 +125,21 @@ const About = () => {
             {highlights.map((item) => (
               <article
                 key={item.title}
-                className="group rounded-3xl border border-slate-200 bg-gray-100 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl hover:shadow-violet-100/60 md:p-7"
+                className="theme-card theme-border group rounded-3xl border p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-xl hover:shadow-violet-100/60 dark:hover:border-[#6558e8] dark:hover:shadow-violet-950/20 md:p-7"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-50 text-2xl transition duration-300 group-hover:bg-violet-100">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-50 text-2xl transition duration-300 group-hover:bg-violet-100 dark:bg-[#29243f] dark:group-hover:bg-[#383052]">
                   <span aria-hidden="true">{item.icon}</span>
                 </div>
 
-                <h3 className="mt-5 text-lg font-bold text-navy">
+                <h3 className="theme-text mt-5 text-lg font-bold transition-colors duration-300">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-slate-600">
+                <p className="theme-muted mt-3 text-sm leading-7 transition-colors duration-300">
                   {item.text}
                 </p>
               </article>
             ))}
-          </div>
-        </div>
-
-        {/* CLOSING STATEMENT */}
-        <div className="mt-20 border-t border-slate-200 pt-10">
-          <div className="rounded-3xl bg-violet-50/70 px-6 py-8 md:px-10 md:py-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              How I approach development
-            </p>
-
-            <blockquote className="mt-4 max-w-4xl text-2xl font-semibold leading-relaxed text-navy md:text-3xl">
-              "Understand the problem, build a thoughtful solution, and keep
-              improving it."
-            </blockquote>
           </div>
         </div>
       </div>

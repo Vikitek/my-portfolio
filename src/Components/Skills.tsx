@@ -1,4 +1,3 @@
-
 const Skills = () => {
   const frontendSkills = [
     "HTML",
@@ -26,9 +25,9 @@ const Skills = () => {
     "VS Code",
     "Postman",
     "Vercel",
-    "googleAuth",
+    "Google OAuth",
     "Brevo",
-    "Claudinary",
+    "Cloudinary",
     "Figma",
   ];
 
@@ -62,7 +61,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 bg-violet-50/50 px-6 py-24 md:px-12 lg:px-20"
+      className="theme-bg-secondary scroll-mt-24 px-6 py-24 transition-colors duration-300 md:px-12 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
         {/* HEADER */}
@@ -71,13 +70,11 @@ const Skills = () => {
             Technical Skills
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-navy md:text-5xl lg:text-6xl">
-            What I use to build
-              useful applications.
-            
+          <h2 className="theme-text mt-4 text-4xl font-bold leading-tight tracking-tight transition-colors duration-300 md:text-5xl lg:text-6xl">
+            What I use to build useful applications.
           </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="theme-muted mt-6 max-w-2xl text-lg leading-8 transition-colors duration-300">
             I'm building my skills across the development stack, with a
             particular interest in backend systems, APIs, and databases.
             Here's a look at the technologies and tools I work with in my
@@ -92,8 +89,8 @@ const Skills = () => {
               key={group.title}
               className={`group relative flex flex-col overflow-hidden rounded-3xl border p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl md:p-8 ${
                 group.featured
-                  ? "border-violet-200 bg-white shadow-lg shadow-violet-100/70 ring-1 ring-violet-100"
-                  : "border-slate-200 bg-white shadow-sm hover:border-violet-200 hover:shadow-violet-100/60"
+                  ? "border-violet-200 bg-white shadow-lg shadow-violet-100/70 ring-1 ring-violet-100 dark:border-[#494064] dark:bg-[#1b1b2a] dark:shadow-violet-950/20 dark:ring-[#38334f]"
+                  : "theme-card theme-border shadow-sm hover:border-violet-200 hover:shadow-violet-100/60 dark:hover:border-[#6558e8] dark:hover:shadow-violet-950/20"
               }`}
             >
               {/* BACKEND ACCENT */}
@@ -101,31 +98,35 @@ const Skills = () => {
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-violet-300" />
               )}
 
+              {/* ICON AND FEATURE LABEL */}
               <div className="flex items-center justify-between gap-3">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-50 text-xl font-bold text-primary transition duration-300 group-hover:bg-violet-100">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-50 text-xl font-bold text-primary transition duration-300 group-hover:bg-violet-100 dark:bg-[#29243f] dark:group-hover:bg-[#383052]">
                   <span aria-hidden="true">{group.icon}</span>
                 </div>
 
                 {group.featured && (
-                  <span className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1.5 text-xs font-semibold text-primary">
+                  <span className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1.5 text-xs font-semibold text-primary dark:border-[#494064] dark:bg-[#29243f]">
                     Current Focus
                   </span>
                 )}
               </div>
 
-              <h3 className="mt-7 text-2xl font-bold text-navy">
+              {/* GROUP TITLE */}
+              <h3 className="theme-text mt-7 text-2xl font-bold transition-colors duration-300">
                 {group.title}
               </h3>
 
-              <p className="mt-3 leading-7 text-slate-600">
+              {/* GROUP DESCRIPTION */}
+              <p className="theme-muted mt-3 leading-7 transition-colors duration-300">
                 {group.description}
               </p>
 
+              {/* SKILL BADGES */}
               <div className="mt-7 flex flex-wrap gap-2.5">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-medium text-slate-700 transition duration-200 hover:border-violet-300 hover:bg-violet-50 hover:text-primary"
+                    className="theme-border theme-text rounded-full border bg-slate-50 px-3.5 py-2 text-sm font-medium transition duration-200 hover:border-violet-300 hover:bg-violet-50 hover:text-primary dark:bg-[#151522] dark:hover:border-[#6558e8] dark:hover:bg-[#29243f] dark:hover:text-[#a78bfa]"
                   >
                     {skill}
                   </span>
@@ -136,7 +137,7 @@ const Skills = () => {
         </div>
 
         {/* CLOSING STATEMENT */}
-        <div className="relative mt-16 overflow-hidden rounded-3xl bg-navy px-7 py-10 text-white md:px-12 md:py-12">
+        <div className="relative mt-16 overflow-hidden rounded-3xl bg-navy px-7 py-10 text-white transition-colors duration-300 dark:bg-[#1b1b2a] md:px-12 md:py-12">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-12 -top-20 h-64 w-64 rounded-full bg-violet-400/20 blur-3xl"
@@ -152,7 +153,7 @@ const Skills = () => {
               real problems — one project at a time.
             </h3>
 
-            <p className="mt-5 text-base leading-7 text-slate-300">
+            <p className="mt-5 text-base leading-7 text-slate-300 dark:text-[#a1a1b5]">
               The goal isn't just to know the tools. It's to understand when
               and how to use them to build something that works.
             </p>
