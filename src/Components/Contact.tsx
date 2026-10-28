@@ -145,10 +145,10 @@ const Contact = () => {
               <div>
                 <p className="theme-muted text-sm font-medium">Phone</p>
                 <a
-                  href="tel:+2348032787704"
+                  href="tel:+2347038682111"
                   className="theme-text mt-1 inline-block font-semibold transition-colors hover:text-primary"
                 >
-                  +234 803 278 7704
+                  +2347038682111
                 </a>
               </div>
             </div>
@@ -167,9 +167,7 @@ const Contact = () => {
 
             {/* SOCIAL LINKS */}
             <div className="theme-border mt-10 border-t pt-7">
-              <p className="theme-text text-sm font-semibold">
-                Find me online
-              </p>
+              <p className="theme-text text-sm font-semibold">Find me online</p>
 
               <div className="mt-4 flex flex-wrap gap-3">
                 <a
