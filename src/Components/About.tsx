@@ -7,22 +7,22 @@ const About = () => {
     {
       icon: "⚙️",
       title: "Backend Development",
-      text: "Building server-side logic and APIs that help applications work reliably.",
+      text: "Developing server-side applications, building REST APIs, and implementing application logic.",
     },
     {
       icon: "🗄️",
-      title: "Databases & APIs",
-      text: "Working with data, designing API endpoints, and connecting application features.",
+      title: "Databases & Data Management",
+      text: "Working with MongoDB and exploring PostgreSQL, SQL, database relationships, and data integrity.",
     },
     {
       icon: "💼",
       title: "Business Perspective",
-      text: "Using my background in business administration to understand the problem behind the code.",
+      text: "Combining my Business Administration background with technology to understand problems and build practical solutions.",
     },
     {
       icon: "🌱",
       title: "Continuous Learning",
-      text: "Strengthening my skills by building projects, solving problems, and learning new concepts.",
+      text: "Expanding my backend knowledge through TypeScript, Supabase, Edge Functions, and hands-on projects.",
     },
   ];
 
@@ -40,12 +40,12 @@ const About = () => {
 
           <h2 className="theme-text mt-4 text-4xl font-bold leading-tight tracking-tight transition-colors duration-300 md:text-5xl lg:text-6xl">
             I like understanding <br />
-              how things work.
+            how things work.
           </h2>
 
           <p className="theme-muted mt-6 max-w-2xl text-lg leading-8 transition-colors duration-300">
-            Especially when I can turn that understanding into something
-            useful.
+            Especially when I can turn that understanding into reliable
+            technology that solves real-world problems.
           </p>
         </div>
 
@@ -54,45 +54,65 @@ const About = () => {
           {/* INTRODUCTION */}
           <div>
             <p className="theme-muted text-base leading-8 transition-colors duration-300 md:text-lg">
-              I'm Victor Adama, a developer with a growing focus on backend
-              development and fullstack web applications. I enjoy learning
-              how the different parts of an application fit together; from
-              the interface people use to the APIs, databases, and server-side
-              logic working behind it.
+              I'm Victor Adama, a backend-focused developer with an interest
+              in building reliable web applications and the systems that
+              power them. I enjoy working with APIs, databases, server-side
+              logic, and the technologies that connect different parts of
+              an application.
             </p>
 
             <p className="theme-muted mt-6 text-base leading-8 transition-colors duration-300 md:text-lg">
-              Before moving into technology, I studied Business Administration
-              and developed an appreciation for organization, communication,
-              and understanding people's needs. That experience still shapes
-              how I approach software: I want to understand the problem before
-              deciding how to solve it.
+              My background is in Business Administration, where I developed
+              valuable experience in operations, sales, logistics, and
+              customer relationship management. This experience influences
+              how I approach software development: understanding the
+              underlying problem, considering the people involved, and
+              building solutions that serve a practical purpose.
             </p>
 
             {/* EXPANDABLE STORY */}
             {showMore && (
               <div className="mt-6 space-y-5 rounded-2xl border border-violet-100 bg-violet-50/70 p-6 transition-colors duration-300 dark:border-[#38334f] dark:bg-[#1b1b2a] md:p-8">
                 <p className="theme-muted leading-8">
-                  My journey into development started with the fundamentals
-                  of web development. As I learned HTML, CSS, JavaScript,
-                  React, and TypeScript, I became increasingly interested in
-                  what happens behind the interface; how applications
-                  process requests, manage information, and communicate with
-                  databases.
+                  My journey into technology started with learning the
+                  fundamentals of web development. Through HTML, CSS,
+                  JavaScript, TypeScript, React, and Tailwind CSS, I developed
+                  an understanding of how modern web interfaces are built.
+                  As I progressed, I became increasingly interested in the
+                  backend systems responsible for processing requests,
+                  managing data, and powering application functionality.
                 </p>
 
                 <p className="theme-muted leading-8">
-                  That curiosity has led me deeper into backend development,
-                  including building APIs, working with databases, and
-                  learning how authentication and server-side logic fit into
-                  a complete application.
+                  I have since been developing my backend skills with
+                  Node.js, Express.js, MongoDB, and Mongoose, including
+                  building REST APIs, working with authentication, and
+                  connecting application features to databases.
                 </p>
 
                 <p className="theme-muted leading-8">
-                  I'm continuing to grow through hands-on projects and
-                  practical problem-solving. My goal is to become a developer
-                  who can build reliable systems while keeping the people
-                  and real-world needs behind those systems in mind.
+                  More recently, I have been expanding my knowledge of
+                  relational databases and fintech backend technologies.
+                  This includes learning SQL and PostgreSQL, database
+                  relationships, joins, indexes, constraints, migrations,
+                  and ACID transactions. I have also been exploring
+                  Supabase, its authentication system, Row Level Security
+                  (RLS), and Edge Functions using TypeScript.
+                </p>
+
+                <p className="theme-muted leading-8">
+                  I believe my combination of business experience and
+                  technical development gives me a useful perspective:
+                  I don't just want to write code; I want to understand
+                  the needs behind the software and build solutions that
+                  are dependable, useful, and maintainable.
+                </p>
+
+                <p className="theme-muted leading-8">
+                  My goal is to continue growing as a backend engineer,
+                  contribute to meaningful software projects, and develop
+                  the skills needed to build secure and scalable applications,
+                  particularly in the fintech space.
                 </p>
               </div>
             )}

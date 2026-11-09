@@ -1,4 +1,5 @@
 const Skills = () => {
+  // Skills you have practised through projects and hands-on development
   const frontendSkills = [
     "HTML",
     "CSS",
@@ -11,12 +12,13 @@ const Skills = () => {
   const backendSkills = [
     "Node.js",
     "Express.js",
-    "REST APIs",
+    "REST API Development",
     "Routes & Controllers",
     "Middleware",
     "MongoDB",
     "Mongoose",
     "Authentication",
+    "API Integration",
   ];
 
   const tools = [
@@ -25,17 +27,34 @@ const Skills = () => {
     "VS Code",
     "Postman",
     "Vercel",
+    "Render",
     "Google OAuth",
     "Brevo",
     "Cloudinary",
     "Figma",
   ];
 
+  // Technologies and concepts you are currently learning and exploring
+  const learningSkills = [
+    "PostgreSQL",
+    "SQL",
+    "Supabase",
+    "Supabase Edge Functions",
+    "Row Level Security (RLS)",
+    "Database Design",
+    "Database Migrations",
+    "SQL Joins",
+    "Database Indexes",
+    "Constraints",
+    "ACID Transactions",
+    "Supabase Authentication",
+  ];
+
   const skillGroups = [
     {
       title: "Backend Development",
       description:
-        "Building the server-side logic that allows applications to process requests, manage data, and deliver reliable functionality.",
+        "Building server-side applications, developing REST APIs, managing application data, and implementing authentication and backend functionality.",
       icon: "{ }",
       skills: backendSkills,
       featured: true,
@@ -43,7 +62,7 @@ const Skills = () => {
     {
       title: "Frontend Development",
       description:
-        "Creating responsive interfaces that make applications accessible, intuitive, and pleasant to use.",
+        "Creating responsive and user-friendly interfaces using modern frontend technologies to deliver accessible and engaging web experiences.",
       icon: "</>",
       skills: frontendSkills,
       featured: false,
@@ -51,7 +70,7 @@ const Skills = () => {
     {
       title: "Tools & Workflow",
       description:
-        "Using development and collaboration tools to write, test, manage, and deploy projects.",
+        "Using development, testing, collaboration, and deployment tools to build, manage, and deliver web applications.",
       icon: "⚙",
       skills: tools,
       featured: false,
@@ -75,14 +94,15 @@ const Skills = () => {
           </h2>
 
           <p className="theme-muted mt-6 max-w-2xl text-lg leading-8 transition-colors duration-300">
-            I'm building my skills across the development stack, with a
-            particular interest in backend systems, APIs, and databases.
-            Here's a look at the technologies and tools I work with in my
-            projects.
+            I'm developing my skills across the software development stack,
+            with a particular focus on backend engineering, API development,
+            databases, and building reliable applications. Here are the
+            technologies I have practised and the areas I am currently
+            exploring.
           </p>
         </div>
 
-        {/* SKILL GROUPS */}
+        {/* PRACTISED SKILLS */}
         <div className="mt-14 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
             <article
@@ -106,7 +126,7 @@ const Skills = () => {
 
                 {group.featured && (
                   <span className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1.5 text-xs font-semibold text-primary dark:border-[#494064] dark:bg-[#29243f]">
-                    Current Focus
+                    Primary Focus
                   </span>
                 )}
               </div>
@@ -136,6 +156,42 @@ const Skills = () => {
           ))}
         </div>
 
+        {/* CURRENTLY LEARNING */}
+        <div className="theme-card theme-border mt-10 rounded-3xl border p-7 transition-colors duration-300 md:p-9">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                Expanding My Knowledge
+              </p>
+
+              <h3 className="theme-text mt-3 text-2xl font-bold md:text-3xl">
+                Currently Learning & Exploring
+              </h3>
+            </div>
+
+            <span className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1.5 text-xs font-semibold text-primary dark:border-[#494064] dark:bg-[#29243f]">
+              In Progress
+            </span>
+          </div>
+
+          <p className="theme-muted mt-4 max-w-3xl leading-7">
+            Strengthening my backend engineering knowledge through hands-on
+            practice with relational databases, SQL, Supabase, and fintech
+            backend concepts.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-2.5">
+            {learningSkills.map((skill) => (
+              <span
+                key={skill}
+                className="theme-border theme-text rounded-full border bg-slate-50 px-3.5 py-2 text-sm font-medium transition duration-200 hover:border-violet-300 hover:bg-violet-50 hover:text-primary dark:bg-[#151522] dark:hover:border-[#6558e8] dark:hover:bg-[#29243f] dark:hover:text-[#a78bfa]"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* CLOSING STATEMENT */}
         <div className="relative mt-16 overflow-hidden rounded-3xl bg-navy px-7 py-10 text-white transition-colors duration-300 dark:bg-[#1b1b2a] md:px-12 md:py-12">
           <div
@@ -154,8 +210,9 @@ const Skills = () => {
             </h3>
 
             <p className="mt-5 text-base leading-7 text-slate-300 dark:text-[#a1a1b5]">
-              The goal isn't just to know the tools. It's to understand when
-              and how to use them to build something that works.
+              My goal is to go beyond learning technologies and develop
+              the practical understanding needed to design, build, and
+              maintain reliable software solutions.
             </p>
           </div>
         </div>

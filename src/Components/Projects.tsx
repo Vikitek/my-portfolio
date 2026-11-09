@@ -32,7 +32,7 @@ const projects = [
     live: "https://youtube-clone-chi-pink-21.vercel.app/",
     status: "Completed",
     category: "Frontend Development",
-    technologies: ["React", "JavaScript", "CSS"],
+    technologies: ["React", "Responsive Design", "CSS"],
   },
   {
     title: "Fylo Dark",

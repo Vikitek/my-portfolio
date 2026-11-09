@@ -101,11 +101,8 @@ const Hero = () => {
               {/* Soft lavender glow */}
               <div className="absolute inset-0 scale-90 bg-[#a78bfa]/20 blur-[50px] dark:bg-[#7c6fff]/25" />
 
-              {/* Decorative frame */}
-              <div className="absolute -right-4 -top-4 h-full w-full border-2 border-[#a78bfa]/50 dark:border-[#7c6fff]/60 md:-right-5 md:-top-5" />
-
               {/* Image container — original dimensions preserved */}
-              <div className="glow relative h-80 w-72 overflow-hidden rounded-[1rem] opacity-70 bg-[#f5f3ff] shadow-xl transition-colors duration-300 dark:bg-[#1b1b2a] md:h-[28rem] md:w-[23rem] lg:h-[34rem] lg:w-[27rem]">
+              <div className="glow relative h-80 w-72 overflow-hidden rounded-tr-2xl rounded-br-2xl opacity-70 bg-[#f5f3ff] shadow-xl transition-colors duration-300 dark:bg-[#1b1b2a] md:h-[28rem] md:w-[23rem] lg:h-[34rem] lg:w-[27rem]">
                 <img
                   src={victorImage}
                   alt="Victor Adama, backend-focused developer"
