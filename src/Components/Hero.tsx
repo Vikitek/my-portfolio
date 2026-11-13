@@ -28,7 +28,7 @@ const Hero = () => {
 
             <div className="mt-7 flex items-center gap-3">
               <h2 className="text-xl font-semibold text-[#172554] dark:text-[#ddd9ff] md:text-2xl">
-                Fullstack Developer
+                Junior Full-Stack Developer
               </h2>
             </div>
 
@@ -68,6 +68,31 @@ const Hero = () => {
                 className="inline-flex items-center justify-center rounded-full border border-[#c7d2fe] bg-white px-7 py-3.5 font-semibold text-[#4338ca] transition duration-300 hover:-translate-y-1 hover:bg-[#f5f3ff] dark:border-[#45455d] dark:bg-[#1b1b2a] dark:text-[#c4beff] dark:hover:bg-[#292943]"
               >
                 Get In Touch
+              </a>
+
+              {/* CV Download */}
+              <a
+                href="/Adama-Victor-CV.pdf"
+                download="Adama-Victor-CV.pdf"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#4f46e5] px-7 py-3.5 font-semibold text-[#4f46e5] transition duration-300 hover:-translate-y-1 hover:bg-[#4f46e5] hover:text-white dark:border-[#a78bfa] dark:text-[#c4beff] dark:hover:bg-[#7c6fff] dark:hover:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" x2="12" y1="15" y2="3" />
+                </svg>
+                Download My CV
               </a>
             </div>
 
